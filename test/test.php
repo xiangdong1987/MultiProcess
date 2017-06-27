@@ -8,10 +8,11 @@
 require_once "A.php";
 require_once "B.php";
 require_once "../lib/MultiProcess.php";
+require_once "../lib/MultiProcessLockTable.php";
 $setting = [
-    'maxProcess' => 2
+    'maxProcess' => 3
 ];
-$multi = new MultiProcess($setting);
+$multi = new MultiProcessLockTable($setting);
 $data[1]['obj'] = new A();
 $data[1]['method'] = 'printA';
 $data[1]['params'] = ['X'];
